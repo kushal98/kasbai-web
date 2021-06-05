@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# Kasbai Web App
+It is a web portal to manage NGOs Workflow and manage different programs that are running within the organisation.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Running it in you local machine
+
+`
+git clone https://github.com/kushal98/kasbai-web.git
+yarn install
+yarn start
+
+`
+
+
+
+### -------------------------------------------------------------------
 
 ## Available Scripts
 
