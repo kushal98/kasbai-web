@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Col} from 'react-bootstrap'
 import { 
     ComposableMap, Geographies, Geography, 
   } from 'react-simple-maps';
@@ -53,8 +54,9 @@ function Map(props) {
             marginTop: "50px",
         }}>
             <ReactTooltip>{content}</ReactTooltip>
+            <Col lg={4} md={12} sm={12}>
             <div style={{
-                width: "40%",
+                // width: "40%",
             }}>
                 <Card 
                     className="prime-card prime-card-community-selected"
@@ -141,11 +143,12 @@ function Map(props) {
                     Funds <br/> Summary :
                 </h1>
             </div>
+            </Col>
             <ComposableMap
                 projectionConfig={PROJECTION_CONFIG}
                 projection="geoMercator"
                 data-tip=""
-                viewBox="300 210 230 215"
+                viewBox="300 210 220 215"
             >
                 <Geographies geography={INDIA_TOPO_JSON}>
                 {({ geographies }) =>
