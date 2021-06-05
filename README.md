@@ -3,10 +3,12 @@ It is a web portal to manage NGOs Workflow and manage different programs that ar
 
 ## Running it in you local machine
 
-`git clone https://github.com/kushal98/kasbai-web.git <br />
-yarn install<br />
-yarn start `
-
+ ```sh
+$ git clone https://github.com/kushal98/kasbai-web.git
+$ cd kasbai-web
+$ yarn install
+$ yarn start
+```
 
 
 ### -------------------------------------------------------------------
