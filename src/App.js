@@ -5,6 +5,7 @@ import {
   BrowserRouter,
   Switch,
   Route,
+  Redirect,
 } from 'react-router-dom';
 
 import Header from './components/header/Header';
@@ -32,6 +33,7 @@ function App() {
                 path="/approval"
                 component={Approval}
               />
+              <Redirect from="*" to="/home" />
             </Switch>
           </Jumbotron>
         </BrowserRouter>
