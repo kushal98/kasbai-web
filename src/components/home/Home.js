@@ -34,7 +34,7 @@ function Home(props) {
             <Row>
                 <Col lg={4} md={6} sm={12}>
                     <Card className="prime-card prime-lives-card">
-                        <p className="p-card-title">
+                        <p className="p-card-title" >
                             <i className="pi pi-user prime-icon-style" 
                                 style={{
                                     fontSize : "1em",

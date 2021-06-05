@@ -33,6 +33,11 @@ function App() {
                 path="/approval"
                 component={Approval}
               />
+              <Route 
+                exact
+                path="/user-management"
+                component={Approval}
+              />
               <Redirect from="*" to="/home" />
             </Switch>
           </Jumbotron>
