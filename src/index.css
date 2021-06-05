@@ -24,12 +24,24 @@ code {
   border-left: 4px solid rgb(111, 111, 147);
 }
 
+.prime-lives-card  .p-card-title{
+  color: rgb(111, 111, 147);
+}
+
 .prime-outreach-card{
   border-left: 4px solid rgb(65, 128, 88);
 }
 
+.prime-outreach-card .p-card-title{
+  color: rgb(65, 128, 88);
+}
+
 .prime-state-card{
   border-left: 4px solid rgb(155, 150, 87);
+}
+
+.prime-state-card  .p-card-title{
+  color: rgb(155, 150, 87);
 }
 
 .prime-icon-style{
@@ -115,26 +127,49 @@ code {
   border-bottom: 4px solid rgb(147, 206, 185);
 }
 
+.prime-card-community-selected  .p-card-title{
+  color: rgb(147, 206, 185);
+}
+
 .prime-card-community-target{
   border-bottom: 4px solid rgb(238, 148, 52);
+}
+
+.prime-card-community-target  .p-card-title{
+  color: rgb(238, 148, 52);
 }
 
 .prime-card-community-reached{
   border-bottom: 4px solid rgb(108, 62, 121);
 }
 
+.prime-card-community-reached  .p-card-title{
+  color: rgb(108, 62, 121);
+}
+
 .prime-card-community-donor{
   border-bottom: 4px solid rgb(68, 106, 119);
+}
+
+.prime-card-community-donor  .p-card-title{
+  color: rgb(68, 106, 119);
 }
 
 .prime-card-community-vaccine{
   border-bottom: 4px solid rgb(154, 146, 88);
 }
 
+.prime-card-community-vaccine .p-card-title{
+  color: rgb(154, 146, 88);
+}
+
 .prime-card-community-ration{
   border-bottom: 4px solid rgb(142, 75, 70);
 }
 
+.prime-card-community-ration  .p-card-title{
+  color: rgb(142, 75, 70);
+}
 /********  *******/
 
 
