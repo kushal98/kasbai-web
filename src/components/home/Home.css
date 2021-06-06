@@ -14,6 +14,18 @@
     border-left: 4px solid rgb(155, 150, 87);
 }
 
+.prime-o2-cylinder-card{
+    border-left: 4px solid rgb(116, 147, 85);
+}
+
+.prime-auto-ambulance-card{
+    border-left: 4px solid rgb(211, 177, 126);
+}
+
+.prime-food-packet-card{
+    border-left: 4px solid rgb(90, 152, 151);
+}
+
 .prime-icon-style{
     width: 30px;
     height: 30px;
