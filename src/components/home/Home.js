@@ -7,8 +7,7 @@ import { BiCylinder } from "react-icons/bi";
 import { FaAmbulance } from "react-icons/fa";
 import { IoFastFood } from "react-icons/io5";
 
-// import Search from '../search/Search';
-// import Table from '../table/Table'
+// import HomeCarousel from '../carousel/HomeCarousel';
 import Map from '../Map';
 
 import './Home.css';
@@ -176,8 +175,7 @@ function Home(props) {
             </Row>
             <Row>
                 <Col>
-                    {/* <Search />
-                    <Table /> */}
+                    {/* <HomeCarousel /> */}
                 </Col>
             </Row>
         </div>
