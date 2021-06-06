@@ -1,0 +1,35 @@
+.profile-div{
+    border-radius: 0.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 20px;
+    margin: auto;
+    max-width: 100%;
+}
+
+.profile-input{
+    margin: 10px
+}
+
+.profile-input-box{
+    border-radius: 8px;
+    width: 80%;
+}
+
+.profile-title{
+    font-size: 1.2rem;
+    color: #a9a9a9;
+    font-weight: 700;
+    font-family: "IBM Plex Mono",monospace;
+}

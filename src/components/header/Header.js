@@ -16,13 +16,13 @@ function Header(props) {
                   <Nav.Link as={Link}   className="custTag cust1" to="/approval">
                     Approvals
                   </Nav.Link>
-                  <Nav.Link as={Link}  className="custTag cust1" to="/link">
+                  <Nav.Link as={Link}  className="custTag cust1" to="/user-management">
                     User Management
                   </Nav.Link>
-                  <Nav.Link as={Link}  className="custTag cust1" to="/Profile">
+                  <Nav.Link as={Link}  className="custTag cust1" to="/profile">
                     Profile
                   </Nav.Link>
-                  <Nav.Link as={Link}  className="custTag cust1" to="/Profile">
+                  <Nav.Link as={Link}  className="custTag cust1" to="/home">
                     Sign out
                   </Nav.Link>
                 </Nav>

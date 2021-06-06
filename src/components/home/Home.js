@@ -101,10 +101,10 @@ function Home(props) {
             </Row>
             <Row>
                 <Col lg={4} md={6} sm={12}>
-                    <Card className="prime-card prime-outreach-card">
+                    <Card className="prime-card prime-o2-cylinder-card">
                         <p className="p-card-title">
-                            <BiCylinder />
                             O2 Cylinder Distributed
+                            <BiCylinder style={{ float: 'right' }}  />
                         </p>
                         {/* <p className="p-card-subtitle"  style={{
                             fontSize: '25px',
@@ -140,10 +140,10 @@ function Home(props) {
                     </Card>
                 </Col>
                 <Col lg={4} md={6} sm={12}>
-                    <Card className="prime-card prime-outreach-card">
+                    <Card className="prime-card prime-auto-ambulance-card">
                         <p className="p-card-title">
-                            <FaAmbulance/>
                             Auto/Ambulances
+                            <FaAmbulance style={{ float: 'right' }} />
                         </p>
                         <div>
                             <h4>Procured</h4>
@@ -157,10 +157,10 @@ function Home(props) {
                     </Card>
                 </Col>
                 <Col lg={4} md={6} sm={12}>
-                    <Card className="prime-card prime-outreach-card">
+                    <Card className="prime-card prime-food-packet-card">
                         <p className="p-card-title">
-                            <IoFastFood />
                             Food Packet Distributed
+                            <IoFastFood style={{ float: 'right' }} />
                         </p>
                         <div>
                             <h4>Procured</h4>
@@ -170,7 +170,7 @@ function Home(props) {
                             <h4>Distributed</h4>
                             <p>800</p>
                         </div>
-                        <ProgressBar animated now={80} label={"80 %"} bsPrefix="ambulance" />
+                        <ProgressBar animated now={80} label={"80 %"} bsPrefix="food" />
                     </Card>
                 </Col>
             </Row>

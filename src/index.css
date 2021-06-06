@@ -71,7 +71,7 @@ code {
   color: #fff;
   text-align: center;
   white-space: nowrap;
-  background-color: #53946d;
+  background-color: rgb(116, 147, 85);
   transition: width .6s ease;
 }
 
@@ -85,7 +85,6 @@ code {
 ,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
   background-size: 1rem 1rem;
 }
-
 
 .ambulance{
   display: flex;
@@ -105,7 +104,7 @@ code {
   color: #fff;
   text-align: center;
   white-space: nowrap;
-  background-color: #aa745b;
+  background-color: rgb(211, 177, 126);
   transition: width .6s ease;
 }
 
@@ -120,6 +119,62 @@ code {
   background-size: 1rem 1rem;
 }
 
+.food{
+  display: flex;
+  height: 1rem;
+  overflow: hidden;
+  line-height: 0;
+  font-size: .75rem;
+  background-color: #e9ecef;
+  border-radius: .25rem;
+}
+
+.food-bar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: rgb(90, 152, 151);
+  transition: width .6s ease;
+}
+
+.food-bar-animated {
+  animation: 1s linear infinite progress-bar-stripes;
+}
+
+.food-bar-striped {
+  background-image: linear-gradient(
+45deg
+,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-size: 1rem 1rem;
+}
+
+.prime-o2-cylinder-card{
+  border-left: 4px solid rgb(116, 147, 85);
+}
+
+.prime-o2-cylinder-card .p-card-title{
+  color: rgb(116, 147, 85);
+}
+
+.prime-auto-ambulance-card{
+  border-left: 4px solid rgb(211, 177, 126);
+}
+
+.prime-auto-ambulance-card .p-card-title{
+  color: rgb(211, 177, 126);
+}
+
+.prime-food-packet-card{
+  border-left: 4px solid rgb(90, 152, 151);
+}
+
+.prime-food-packet-card .p-card-title{
+  color: rgb(90, 152, 151);
+}
 
 /*******    *******/
 /*******   Map.css *******/
@@ -170,16 +225,26 @@ code {
 .prime-card-community-ration  .p-card-title{
   color: rgb(142, 75, 70);
 }
+
+
+
 /********  *******/
 
 
 /******** Responsive *******/
 @media screen and (max-width: 640px) {
-  
+  .profile-div{
+    width: 100% !important;
+  }
+  .profile-input-box{
+    width: 100% !important;
+}
 }
 
 @media screen and (min-width: 641px) and (max-width: 800px) {
-  
+  .profile-div{
+    width: 100% !important;
+  }
 }
 
 @media screen and (min-width: 801px) and (max-width: 1024px) {

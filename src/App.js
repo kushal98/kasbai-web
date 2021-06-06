@@ -7,12 +7,14 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
+import { Jumbotron } from 'react-bootstrap';
 
 import Header from './components/header/Header';
 import Home from './components/home/Home';
 import Approval from './components/approvals/Approval';
+import UserManagement from './components/user-management/UserManagement';
+import Profile from './components/profile/Profile';
 import history from './components/history';
-import { Jumbotron } from 'react-bootstrap';
 
 function App() {
   return (
@@ -36,7 +38,12 @@ function App() {
               <Route 
                 exact
                 path="/user-management"
-                component={Approval}
+                component={UserManagement}
+              />
+              <Route 
+                exact
+                path="/profile"
+                component={Profile}
               />
               <Redirect from="*" to="/home" />
             </Switch>
