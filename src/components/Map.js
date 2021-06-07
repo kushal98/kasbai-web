@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Col} from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import { 
     ComposableMap, Geographies, Geography, 
   } from 'react-simple-maps';
@@ -74,7 +74,7 @@ function Map(props) {
                             {community}
                     </p>
                 </Card>
-                <Card 
+                {/* <Card 
                     className="prime-card prime-card-community-reached"
                     style={{
                         marginBottom: "25px",
@@ -90,7 +90,7 @@ function Map(props) {
                         }}>
                             20
                     </p>
-                </Card>
+                </Card> */}
                 <Card 
                     className="prime-card prime-card-community-donor"
                     style={{
@@ -136,71 +136,144 @@ function Map(props) {
                             20
                     </p>
                 </Card>
-                <h1 style={{
-                    marginTop : '40px',
-                    marginLeft: '20px',
-                }}>
-                    Funds <br/> Summary :
-                </h1>
+                <div style={{
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                    }}>
+                    <h1 style={{
+                        marginTop : '40px',
+                        marginLeft: '20px',
+                    }}>
+                        Impacted  Areas :
+                    </h1>
+                </div>
             </div>
             </Col>
-            <ComposableMap
-                projectionConfig={PROJECTION_CONFIG}
-                projection="geoMercator"
-                data-tip=""
-                viewBox="300 210 220 215"
-            >
-                <Geographies geography={INDIA_TOPO_JSON}>
-                {({ geographies }) =>
-                    geographies.map((geography, index) => {
-                    //   const current = data.find(s => s.id === geo.id);
-                    return (
-                        <Geography
-                        key={index}
-                        geography={geography}
-                        fill={"#efefef"}
+            <Col lg={8} md={12} sm={12}>
+                <Row>
+                    <ComposableMap
+                        projectionConfig={PROJECTION_CONFIG}
+                        projection="geoMercator"
+                        data-tip=""
+                        viewBox="250 200 320 220"
                         style={{
-                            default: {
-                            // fill: "#D6D6DA",
-                            fill: "#a6a6a6",
-                            opacity: 0.4,
-                            outline: "none",
-                            stroke: "#fff",
-                            strokeWidth: 0.3,
-                            },
-                            hover: {
-                            // fill: "#6C757C",
-                            fill: "#1EA362",
-                            outline: "none",
-                            stroke: "#000",
-                            strokeWidth: 0.1,
-                            },
-                            pressed: {
-                            fill: "#E42",
-                            outline: "none",
-                            stroke: "#000",
-                            strokeWidth: 0.01,
-                            },
+                            marginTop : '-100px'
                         }}
-                        >
-                        </Geography>
-                    );
-                    })
-                }
-                </Geographies>
+                    >
+                        <Geographies geography={INDIA_TOPO_JSON}>
+                        {({ geographies }) =>
+                            geographies.map((geography, index) => {
+                            //   const current = data.find(s => s.id === geo.id);
+                            return (
+                                <Geography
+                                key={index}
+                                geography={geography}
+                                fill={"#efefef"}
+                                style={{
+                                    default: {
+                                    // fill: "#D6D6DA",
+                                    fill: "#a6a6a6",
+                                    opacity: 0.4,
+                                    outline: "none",
+                                    stroke: "#fff",
+                                    strokeWidth: 0.3,
+                                    },
+                                    hover: {
+                                    // fill: "#6C757C",
+                                    fill: "#1EA362",
+                                    outline: "none",
+                                    stroke: "#000",
+                                    strokeWidth: 0.1,
+                                    },
+                                    pressed: {
+                                    fill: "#E42",
+                                    outline: "none",
+                                    stroke: "#000",
+                                    strokeWidth: 0.01,
+                                    },
+                                }}
+                                >
+                                </Geography>
+                            );
+                            })
+                        }
+                        </Geographies>
 
-                {map_data.map((item , index) => (
-                    <Mark 
-                        index={index}
-                        latitude={item.Latitude}
-                        longitude={item.Longitude}
-                        city={item.City}
-                        setTooltipContent={setContent}
-                        setDisplayContent={setCommunityContent}
-                    />
-                ))
-                }
-            </ComposableMap>
+                        {map_data.map((item , index) => (
+                            <Mark 
+                                index={index}
+                                latitude={item.Latitude}
+                                longitude={item.Longitude}
+                                city={item.City}
+                                setTooltipContent={setContent}
+                                setDisplayContent={setCommunityContent}
+                            />
+                        ))
+                        }
+                    </ComposableMap>
+                </Row>
+                <Row>
+                <div style={{ display: 'flex' }}>
+                    <div>
+                        <Card 
+                            className="prime-card prime-card-community-ration"
+                        >
+                            <p className="p-card-title">
+                                1000+
+                            </p>
+                            <p className="p-card-subtitle" style={{
+                                    fontSize: '25px',
+                                }}>
+                                    Frontliners
+                            </p>
+                        </Card>
+                    </div>
+                    <div>
+                        <Card 
+                            className="prime-card prime-card-community-ration"
+                        >
+                            <p className="p-card-title">
+                                200k
+                            </p>
+                            <p className="p-card-subtitle" style={{
+                                    fontSize: '25px',
+                                }}>
+                                    Families
+                            </p>
+                        </Card>
+                    </div>
+                    <div>
+                        <Card 
+                            className="prime-card prime-card-community-ration"
+                        >
+                            <p className="p-card-title">
+                                80+
+                            </p>
+                            <p className="p-card-subtitle" style={{
+                                    fontSize: '25px',
+                                }}>
+                                    Communities
+                            </p>
+                        </Card>
+                    </div>
+                    <div>
+                        <Card 
+                            className="prime-card prime-card-community-ration"
+                        >
+                            <p className="p-card-title">
+                                16
+                            </p>
+                            <p className="p-card-subtitle" style={{
+                                    fontSize: '25px',
+                                }}>
+                                States
+                            </p>
+                        </Card>
+                    </div>
+                </div>
+                </Row>
+            </Col>
+            
         </div>
     );
 }
