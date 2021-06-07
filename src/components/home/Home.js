@@ -8,13 +8,11 @@ import { FaAmbulance } from "react-icons/fa";
 import { IoFastFood } from "react-icons/io5";
 
 // import HomeCarousel from '../carousel/HomeCarousel';
-import Map from '../Map';
+import Map from '../map/Map';
 
 import './Home.css';
 
 function Home(props) {
-
-
     return (
         <div style={{
             overflowX: 'scroll',

@@ -14,7 +14,7 @@ function Map(props) {
     const [content, setContent] = useState("");
     const [community, setCommunityContent] = useState("Pan India");
 
-    const INDIA_TOPO_JSON = require('../assets/map/india.topo.json');
+    const INDIA_TOPO_JSON = require('../../assets/map/india.topo.json');
 
     const PROJECTION_CONFIG = {
     scale: 350,
