@@ -1,6 +1,16 @@
 # Kasbai Web App
 It is a web portal to manage NGOs Workflow and manage different programs that are running within the organisation.
 
+## Key Features 
+```
+- Data Visualization on India Map
+- Campaign Carousels
+- Progress Information based on KPIs
+- User Management 
+- Role Based Access to Dashboard
+- Form Creation for volunteer mobile application
+```
+
 ## Important Link
 
 Dashboard Link - https://kasbai-web.vercel.app/

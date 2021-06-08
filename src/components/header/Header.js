@@ -36,11 +36,11 @@ function Header(props) {
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav" style={{ justifyContent: 'flex-end' , backgroundColor: '#ffffff' }}>
                     <Nav style={{ fontSize: '20px' }} >
-                      <Nav.Link as={Link} onClick={() => props.setLoginTrue(true)} className="custTag cust1" to="/home">
+                      <Nav.Link as={Link} onClick={() => props.setLoginTrue(true)} className="custTag cust1" to="/home" style={{ padding: '5px', marginRight: '8px'  }}>
                         <RiAdminLine size={25} style={{ marginRight: '5px' }}/>
                         Admin Login
                       </Nav.Link>
-                      <Nav.Link as={Link} onClick={() => props.setLoginTrue(true)} className="custTag cust1" to="/home">
+                      <Nav.Link as={Link} onClick={() => props.setLoginTrue(true)} className="custTag cust1" to="/home" style={{ padding: '5px', marginRight: '8px' }}>
                         <BiDonateBlood size={25} style={{ marginRight: '5px' }}/>
                         Donor Login
                       </Nav.Link>
