@@ -8,6 +8,7 @@ import {
   Redirect,
 } from 'react-router-dom';
 import { Jumbotron } from 'react-bootstrap';
+import { ScrollTop } from 'primereact/scrolltop';
 
 import Header from './components/header/Header';
 import Home from './components/home/Home';
@@ -23,6 +24,7 @@ function App() {
   return (
     <div>
         <BrowserRouter history={history}>
+          <ScrollTop />
           <Header loggedIn={authenticated} setLoginTrue={setAuthenticate} />
           <Jumbotron style={{
             backgroundColor: "#ffffff"
