@@ -35,7 +35,14 @@ function SidebarPanel(props) {
                     </li>
                 </Link>
                 <Link to='/home' style={{ textDecoration: 'none' , color: '#000' }}>
-                    <li className="li-item" onClick={e => props.setVisibility(false)}  style={{position: "relative"}}>
+                    <li 
+                        className="li-item" 
+                        onClick={e => {
+                            props.setLogin(false);
+                            props.setVisibility(false);  
+                        }} 
+                        style={{position: "relative"}}
+                    >
                         Sign Out  
                     </li>
                 </Link>

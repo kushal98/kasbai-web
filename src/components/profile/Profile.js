@@ -53,11 +53,11 @@ function Profile(props) {
                 </Col>
                 <Col lg={12} md={12} className="profile-input">
                     <h6 className="profile-title pl-2">Email </h6>
-                    <InputText value={email} onChange={handleEmail} keyfilter="alphanum" id="phone-name" aria-describedby="phone-name-help" className="p-d-block profile-input-box" disabled={ mode === "Normal" ? true : false}/>
+                    <InputText value={email} onChange={handleEmail} keyfilter="alphanum" id="email" aria-describedby="phone-name-help" className="p-d-block profile-input-box" disabled={ mode === "Normal" ? true : false}/>
                 </Col>
                 <Col lg={12} md={12} className="profile-input">
                     <h6 className="profile-title pl-2">User Role</h6>
-                    <InputText value={role} onChange={handleRole} keyfilter="alpha" id="phone-name" aria-describedby="phone-name-help" className="p-d-block profile-input-box" disabled={ mode === "Normal" ? true : false}/>
+                    <InputText value={role} onChange={handleRole} keyfilter="alpha" id="user-role" aria-describedby="phone-name-help" className="p-d-block profile-input-box" disabled={ mode === "Normal" ? true : false}/>
                 </Col>
             </Row>
             <Row style={{

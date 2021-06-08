@@ -1,23 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Card } from 'primereact/card';
-import { Button } from 'primereact/button';
 import { Carousel } from 'primereact/carousel';
+
+import './HomeCarousel.css';
 
 function HomeCarousel(props) {
 
-    const [products, setProducts] = useState([
-        {"id": "1000","code": "f230fh0g3","name": "Bamboo Watch","description": "Product Description","image": "bamboo-watch.jpg","price": 65,"category": "Accessories","quantity": 24,"inventoryStatus": "INSTOCK","rating": 5},
-        {"id": "1001","code": "nvklal433","name": "Black Watch","description": "Product Description","image": "black-watch.jpg","price": 72,"category": "Accessories","quantity": 61,"inventoryStatus": "INSTOCK","rating": 4},
-        {"id": "1002","code": "zz21cz3c1","name": "Blue Band","description": "Product Description","image": "blue-band.jpg","price": 79,"category": "Fitness","quantity": 2,"inventoryStatus": "LOWSTOCK","rating": 3},
-        {"id": "1003","code": "244wgerg2","name": "Blue T-Shirt","description": "Product Description","image": "blue-t-shirt.jpg","price": 29,"category": "Clothing","quantity": 25,"inventoryStatus": "INSTOCK","rating": 5},
-        {"id": "1004","code": "h456wer53","name": "Bracelet","description": "Product Description","image": "bracelet.jpg","price": 15,"category": "Accessories","quantity": 73,"inventoryStatus": "INSTOCK","rating": 4},
-        {"id": "1005","code": "av2231fwg","name": "Brown Purse","description": "Product Description","image": "brown-purse.jpg","price": 120,"category": "Accessories","quantity": 0,"inventoryStatus": "OUTOFSTOCK","rating": 4},
-        {"id": "1006","code": "bib36pfvm","name": "Chakra Bracelet","description": "Product Description","image": "chakra-bracelet.jpg","price": 32,"category": "Accessories","quantity": 5,"inventoryStatus": "LOWSTOCK","rating": 3},
-        {"id": "1007","code": "mbvjkgip5","name": "Galaxy Earrings","description": "Product Description","image": "galaxy-earrings.jpg","price": 34,"category": "Accessories","quantity": 23,"inventoryStatus": "INSTOCK","rating": 5},
-        {"id": "1008","code": "vbb124btr","name": "Game Controller","description": "Product Description","image": "game-controller.jpg","price": 99,"category": "Electronics","quantity": 2,"inventoryStatus": "LOWSTOCK","rating": 4},
-        {"id": "1009","code": "cm230f032","name": "Gaming Set","description": "Product Description","image": "gaming-set.jpg","price": 299,"category": "Electronics","quantity": 63,"inventoryStatus": "INSTOCK","rating": 3}
-    ]);
+      const campaigns = [
+        {"id": "1000","name": "Food Packet Distribution","image": "https://www.indiagainstcorona.com/06373603ffdc0bcc7e79908efab9e31c.jpg","description": "COVID-19 has wreaked havoc on the under privileged in India. It has exacerbated their everyday struggles – which is a deadly reality for many. Virus scares are their second priority, as many are struggling to stay alive."},
+        {"id": "1001","name": "O2 Concentrators","image": "http://www.theupasana.org/wp-content/uploads/2016/10/ME-YOU-THEM-UPASANA-Society-NGO-HEALTH-CAMPAIGN-860x500.jpg","description": "COVID-19 has wreaked havoc on the under privileged in India. It has exacerbated their everyday struggles – which is a deadly reality for many. Virus scares are their second priority, as many are struggling to stay alive"},
+        {"id": "1002","name": "Corona Kit","image": "https://www.indiagainstcorona.com/da1d01fb4e64d81dc858562df81751c1.jpg","description": "COVID-19 has wreaked havoc on the under privileged in India. It has exacerbated their everyday struggles – which is a deadly reality for many. Virus scares are their second priority, as many are struggling to stay alive"},
+        {"id": "1003","name": "Home Essentials Distribution","image": "https://www.indiagainstcorona.com/3a892072ef0e5dc95d65dc5ecd79c430.jpg","description": "COVID-19 has wreaked havoc on the under privileged in India. It has exacerbated their everyday struggles – which is a deadly reality for many. Virus scares are their second priority, as many are struggling to stay alive"},
+        {"id": "1004","name": "Vaccine Awareness","image": "http://www.theupasana.org/wp-content/uploads/2016/10/ME-YOU-THEM-UPASANA-Society-NGO-HEALTH-CAMPAIGN-860x500.jpg","description": "COVID-19 has wreaked havoc on the under privileged in India. It has exacerbated their everyday struggles – which is a deadly reality for many. Virus scares are their second priority, as many are struggling to stay alive"},
+        {"id": "1005","name": "Medical Consultation","image": "https://www.indiagainstcorona.com/da1d01fb4e64d81dc858562df81751c1.jpg","description": "COVID-19 has wreaked havoc on the under privileged in India. It has exacerbated their everyday struggles – which is a deadly reality for many. Virus scares are their second priority, as many are struggling to stay alive"},
+        ];
 
     const responsiveOptions = [
         {
@@ -37,34 +34,40 @@ function HomeCarousel(props) {
         }
     ];
 
-    const productTemplate = (product) => {
+    const campaignTemplate = (campaign) => {
         return (
-            <Card>
-            <div className="product-item">
-                <div className="product-item-content">
-                    <div className="p-mb-3">
-                        <img src={``} onError={(e) => e.target.src='https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={product.name} className="product-image" />
-                    </div>
-                    <div>
-                        <h4 className="p-mb-1">{product.name}</h4>
-                        <h6 className="p-mt-0 p-mb-3">${product.price}</h6>
-                        <span className={`product-badge status-${product.inventoryStatus.toLowerCase()}`}>{product.inventoryStatus}</span>
-                        <div className="car-buttons p-mt-5">
-                            <Button icon="pi pi-search" className="p-button p-button-rounded p-mr-2" />
-                            <Button icon="pi pi-star" className="p-button-success p-button-rounded p-mr-2" />
-                            <Button icon="pi pi-cog" className="p-button-help p-button-rounded" />
+            <Card style={{ 
+                margin: '10px', 
+                // border: '3px dashed #676767', 
+                borderBottom: '2px solid #676767', 
+            }}>
+                <div className="product-item">
+                    <div className="product-item-content">
+                        <div className="p-mb-3 campaign-image">
+                            <img src={`${campaign.image}`} width="100%" height="300px" onError={(e) => e.target.src='https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={campaign.name} className="product-image" />
+                        </div>
+                        <div>
+                            <h4 className="p-mb-1">{campaign.name}</h4>
+                            <span className={`product-badge status-${campaign.description}`}>{campaign.description}</span>
                         </div>
                     </div>
                 </div>
-            </div>
             </Card>
         );
     }
 
     return (
-        <div>
-            <Carousel value={products} numVisible={4} numScroll={4} circular={true} responsiveOptions={responsiveOptions}
-                    itemTemplate={productTemplate} header={<h1>Basic</h1>} />
+        <div style={{
+            marginTop: "20px",
+        }}>
+            <Carousel 
+                value={campaigns} 
+                numVisible={3} 
+                numScroll={1} 
+                circular={true} 
+                responsiveOptions={responsiveOptions}
+                itemTemplate={campaignTemplate} 
+            />
         </div>
     );
 }

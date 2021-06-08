@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css';
 
 import {
@@ -17,35 +17,52 @@ import Profile from './components/profile/Profile';
 import history from './components/history';
 
 function App() {
+
+  const [authenticated , setAuthenticate] = useState(false)
+
   return (
     <div>
         <BrowserRouter history={history}>
-          <Header />
+          <Header loggedIn={authenticated} setLoginTrue={setAuthenticate} />
           <Jumbotron style={{
             backgroundColor: "#ffffff"
           }}> 
             <Switch >
-              <Route 
-                exact
-                path="/home"
-                component={Home}
-              />
-              <Route 
-                exact
-                path="/approval"
-                component={Approval}
-              />
-              <Route 
-                exact
-                path="/user-management"
-                component={UserManagement}
-              />
-              <Route 
-                exact
-                path="/profile"
-                component={Profile}
-              />
-              <Redirect from="*" to="/home" />
+              {
+                !authenticated?
+                <>
+                  <Route 
+                    exact
+                    path="/home"
+                    component={Home}
+                  />
+                  <Redirect from="*" to="/home" />
+                </>
+                :
+                <>
+                  <Route 
+                    exact
+                    path="/home"
+                    component={Home}
+                  />
+                  <Route 
+                    exact
+                    path="/approval"
+                    component={Approval}
+                  />
+                  <Route 
+                    exact
+                    path="/user-management"
+                    component={UserManagement}
+                  />
+                  <Route 
+                    exact
+                    path="/profile"
+                    component={Profile}
+                  />
+                  <Redirect from="*" to="/home" />
+                </>
+              }
             </Switch>
           </Jumbotron>
         </BrowserRouter>
