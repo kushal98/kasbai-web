@@ -7,7 +7,7 @@ import { BiCylinder } from "react-icons/bi";
 import { FaAmbulance } from "react-icons/fa";
 import { IoFastFood } from "react-icons/io5";
 
-// import HomeCarousel from '../carousel/HomeCarousel';
+import HomeCarousel from '../carousel/HomeCarousel';
 import Map from '../map/Map';
 
 import './Home.css';
@@ -87,7 +87,7 @@ function Home(props) {
                 </Col>
 
             </Row>
-            <Row style={{
+            <Row  style={{
                 marginBottom: "30px",
                 marginTop: '20px',
             }}>
@@ -171,9 +171,15 @@ function Home(props) {
                     </Card>
                 </Col>
             </Row>
-            <Row>
+            <Row style={{
+                marginBottom: "30px",
+                marginTop: '30px',
+            }}>
                 <Col>
-                    {/* <HomeCarousel /> */}
+                    <h1> Campaign Highlights : </h1>
+                </Col>
+                <Col>
+                    <HomeCarousel />
                 </Col>
             </Row>
         </div>
