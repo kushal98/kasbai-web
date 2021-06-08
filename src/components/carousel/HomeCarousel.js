@@ -1,21 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Card } from 'primereact/card';
-import { Button } from 'primereact/button';
 import { Carousel } from 'primereact/carousel';
 
 import './HomeCarousel.css';
 
 function HomeCarousel(props) {
 
-      const [campaigns, setCampaign] = useState([
+      const campaigns = [
         {"id": "1000","name": "Food Packet Distribution","image": "https://www.indiagainstcorona.com/06373603ffdc0bcc7e79908efab9e31c.jpg","description": "COVID-19 has wreaked havoc on the under privileged in India. It has exacerbated their everyday struggles – which is a deadly reality for many. Virus scares are their second priority, as many are struggling to stay alive."},
         {"id": "1001","name": "O2 Concentrators","image": "http://www.theupasana.org/wp-content/uploads/2016/10/ME-YOU-THEM-UPASANA-Society-NGO-HEALTH-CAMPAIGN-860x500.jpg","description": "COVID-19 has wreaked havoc on the under privileged in India. It has exacerbated their everyday struggles – which is a deadly reality for many. Virus scares are their second priority, as many are struggling to stay alive"},
         {"id": "1002","name": "Corona Kit","image": "https://www.indiagainstcorona.com/da1d01fb4e64d81dc858562df81751c1.jpg","description": "COVID-19 has wreaked havoc on the under privileged in India. It has exacerbated their everyday struggles – which is a deadly reality for many. Virus scares are their second priority, as many are struggling to stay alive"},
         {"id": "1003","name": "Home Essentials Distribution","image": "https://www.indiagainstcorona.com/3a892072ef0e5dc95d65dc5ecd79c430.jpg","description": "COVID-19 has wreaked havoc on the under privileged in India. It has exacerbated their everyday struggles – which is a deadly reality for many. Virus scares are their second priority, as many are struggling to stay alive"},
         {"id": "1004","name": "Vaccine Awareness","image": "http://www.theupasana.org/wp-content/uploads/2016/10/ME-YOU-THEM-UPASANA-Society-NGO-HEALTH-CAMPAIGN-860x500.jpg","description": "COVID-19 has wreaked havoc on the under privileged in India. It has exacerbated their everyday struggles – which is a deadly reality for many. Virus scares are their second priority, as many are struggling to stay alive"},
         {"id": "1005","name": "Medical Consultation","image": "https://www.indiagainstcorona.com/da1d01fb4e64d81dc858562df81751c1.jpg","description": "COVID-19 has wreaked havoc on the under privileged in India. It has exacerbated their everyday struggles – which is a deadly reality for many. Virus scares are their second priority, as many are struggling to stay alive"},
-        ]);
+        ];
 
     const responsiveOptions = [
         {
