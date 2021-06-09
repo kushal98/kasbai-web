@@ -9,7 +9,7 @@ import { Table} from "react-bootstrap";
 function Mark(props) {
     return (
                 <Marker 
-                    key={props.index} 
+                    key={props.city} 
                     coordinates = {[props.latitude  , props.longitude]}
                     onMouseEnter={() => {
                         props.setDisplayContent(props.city)

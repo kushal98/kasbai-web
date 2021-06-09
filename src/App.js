@@ -14,7 +14,7 @@ import Header from './components/header/Header';
 import Home from './components/home/Home';
 import Approval from './components/approvals/Approval';
 import UserManagement from './components/user-management/UserManagement';
-import VolunteerForm from './components/form/VolunteerForm';
+import FormPage from './components/form/FormPage';
 import Profile from './components/profile/Profile';
 import history from './components/history';
 
@@ -61,7 +61,7 @@ function App() {
                   <Route 
                     exact
                     path="/forms"
-                    component={VolunteerForm}
+                    component={FormPage}
                   />
                   <Route 
                     exact

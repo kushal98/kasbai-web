@@ -3,13 +3,17 @@ import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { Card } from 'primereact/card'
 import { Button } from 'primereact/button';
-import { Dialog } from 'primereact/dialog';
 
-function VolunteerForm(props) {
+import SurvivalKitForm from './SurvivalKitForm';
+import PHForm from './PHForm';
+import VaccineRegForm from './VaccineRegForm';
+
+
+function FormPage(props) {
 
     const [skdialog , setSkDialog] = useState(false)
-    const [vrdialog , setVrDialog] = useState(false)
     const [phdialog , setPhDialog] = useState(false)
+    const [vrdialog , setVrDialog] = useState(false)
 
     const Cardfooter = ({ setDialog }) => (
         <span>
@@ -21,39 +25,6 @@ function VolunteerForm(props) {
             />
         </span>
     )
-
-    const SKDialog = () => (
-        <Dialog 
-            header= 'Survival Kit Form'
-            visible={skdialog} 
-            onHide={() => setSkDialog(false)}
-            style={{width: '50vw'}}
-        >
-
-        </Dialog>
-    );
-
-    const VRDialog = () => (
-        <Dialog 
-            header= 'Vaccine Registration Form'
-            visible={vrdialog} 
-            onHide={() => setVrDialog(false)}
-            style={{width: '50vw'}}
-        >
-
-        </Dialog>
-    );
-
-    const PHDialog = () => (
-        <Dialog 
-            header= 'Primary Healthcare Form'
-            visible={phdialog} 
-            onHide={() => setPhDialog(false)}
-            style={{width: '50vw'}}
-        >
-
-        </Dialog>
-    );
 
     return (
         <>
@@ -83,11 +54,11 @@ function VolunteerForm(props) {
                     />
                 </Col>
             </Row>
-            <SKDialog />
-            <VRDialog />
-            <PHDialog />
+            <SurvivalKitForm skdialog={skdialog} setSkDialog={setSkDialog} />
+            <VaccineRegForm vrdialog={vrdialog} setVrDialog={setVrDialog} />
+            <PHForm phdialog={phdialog} setPhDialog={setPhDialog} />
         </>
     );
 }
 
-export default VolunteerForm;
+export default FormPage;

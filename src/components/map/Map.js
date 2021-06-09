@@ -96,11 +96,11 @@ function Map(props) {
                             20K
                     </p> */}
                     <OverlayTrigger
-                        key={'top'}
+                        key={'top-sk'}
                         placement={'top-end'}
                         defaultShow={true}
                         overlay={
-                            <Tooltip id={`tooltip-top`}>
+                            <Tooltip id={`tooltip-top-sk`}>
                                 <b>Target : </b> 50k Individuals<br />
                                 <b>Achieved till now : </b> 20k
                             </Tooltip>
@@ -129,11 +129,11 @@ function Map(props) {
                     </p> */}
 
                     <OverlayTrigger
-                        key={'top'}
+                        key={'top-vr'}
                         placement={'top-end'}
                         defaultShow={true}
                         overlay={
-                            <Tooltip id={`tooltip-top`}>
+                            <Tooltip id={`tooltip-top-vr`}>
                                 <b>Target : </b> 100k Individuals<br />
                                 <b>Achieved till now : </b> 60k
                             </Tooltip>
@@ -158,11 +158,11 @@ function Map(props) {
                     </p> */}
 
                     <OverlayTrigger
-                        key={'top'}
+                        key={'top-ph'}
                         placement={'top-end'}
                         defaultShow={true}
                         overlay={
-                            <Tooltip id={`tooltip-top`}>
+                            <Tooltip id={`tooltip-top-ph`}>
                                 <b>Target : </b> 10k Families <br />
                                 <b>Achieved till now : </b> 5K
                             </Tooltip>
@@ -236,6 +236,7 @@ function Map(props) {
 
                         {map_data.map((item , index) => (
                             <Mark 
+                                key={index}
                                 index={index}
                                 latitude={item.Latitude}
                                 longitude={item.Longitude}
