@@ -29,6 +29,11 @@ function SidebarPanel(props) {
                         User Management 
                     </li>
                 </Link>
+                <Link to='/forms' style={{ textDecoration: 'none' , color: '#000' }}>
+                    <li className="li-item" onClick={e => props.setVisibility(false)}  style={{position: "relative"}}>
+                        Volunteer Forms
+                    </li>
+                </Link>
                 <Link to='/profile' style={{ textDecoration: 'none' , color: '#000' }}>
                     <li className="li-item" onClick={e => props.setVisibility(false)}  style={{position: "relative"}}>
                         Profile 
