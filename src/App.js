@@ -12,6 +12,7 @@ import { ScrollTop } from 'primereact/scrolltop';
 
 import Header from './components/header/Header';
 import Home from './components/home/Home';
+import Donor from './components/donor/Donor';
 import Approval from './components/approvals/Approval';
 import UserManagement from './components/user-management/UserManagement';
 import FormPage from './components/form/FormPage';
@@ -47,6 +48,11 @@ function App() {
                     exact
                     path="/home"
                     component={Home}
+                  />
+                  <Route 
+                    exact
+                    path="/donor"
+                    component={Donor}
                   />
                   <Route 
                     exact

@@ -34,6 +34,11 @@ function SidebarPanel(props) {
                         Volunteer Forms
                     </li>
                 </Link>
+                <Link to='/donor' style={{ textDecoration: 'none' , color: '#000' }}>
+                    <li className="li-item" onClick={e => props.setVisibility(false)}  style={{position: "relative"}}>
+                        Donor 
+                    </li>
+                </Link>
                 <Link to='/profile' style={{ textDecoration: 'none' , color: '#000' }}>
                     <li className="li-item" onClick={e => props.setVisibility(false)}  style={{position: "relative"}}>
                         Profile 
