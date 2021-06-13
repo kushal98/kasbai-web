@@ -21,13 +21,17 @@ import history from './components/history';
 
 function App() {
 
-  const [authenticated , setAuthenticate] = useState(false)
+  const auth = localStorage.getItem('auth')
+  const type = localStorage.getItem('login-type')
+
+  const [authenticated , setAuthenticate] = useState(auth? auth : false)
+  const [loginType, setLoginType] = useState(type? type : '');
 
   return (
     <div>
         <BrowserRouter history={history}>
           <ScrollTop />
-          <Header loggedIn={authenticated} setLoginTrue={setAuthenticate} />
+          <Header loggedIn={authenticated} loginType={loginType} setLoginType={setLoginType} setLoginTrue={setAuthenticate} />
           <Jumbotron style={{
             backgroundColor: "#ffffff"
           }}> 
@@ -43,6 +47,7 @@ function App() {
                   <Redirect from="*" to="/home" />
                 </>
                 :
+                loginType === 'Admin'?
                 <>
                   <Route 
                     exact
@@ -75,6 +80,15 @@ function App() {
                     component={Profile}
                   />
                   <Redirect from="*" to="/home" />
+                </>
+                :
+                <>
+                  <Route 
+                    exact
+                    path="/donor"
+                    component={Donor}
+                  />
+                  <Redirect from="*" to="/donor" />                
                 </>
               }
             </Switch>
