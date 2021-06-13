@@ -1,17 +1,69 @@
 import React from 'react';
 
 import { Row, Col } from 'react-bootstrap';
-import {Button} from 'primereact/button';
+import { Card } from 'primereact/card';
+
+import './Donor.css';
 
 function Donor(props) {
     return (
         <>
             <Row>
-                <Col lg={6} md={6} sm={12}>
-                    <Button label="View Documents" />
+                <Col>
+                    <h1>Hello, <i>Donor Name</i></h1>
                 </Col>
-                <Col lg={6} md={6} sm={12}>
-                    <Button label="Download Report" />
+                <Col style={{
+                    display: 'flex',
+                    justifyContent: 'flex-end'
+                }}>
+                    <p>Last Updated on 13 June, 08:22 PM IST</p>
+                </Col>
+            </Row>
+            <Row>
+                <Col lg={4} md={6} sm={12}>
+                    <Card className="prime-card prime-lives-card donor-info-card">
+                        <p>
+                            <b>About Project : </b><br/>  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </Card>
+                </Col>
+                <Col lg={4} md={6} sm={12}>
+                    <Card className="prime-card prime-lives-card">
+                        <p className="p-card-title" >
+                            <i className="pi pi-user prime-icon-style" 
+                                style={{
+                                    fontSize : "1em",
+                                    backgroundColor: "#e2e2e2",
+                                }}
+                            >
+
+                            </i>
+                            Total Lives Impacted
+                        </p>
+                        <p className="p-card-subtitle"  style={{
+                            fontSize: '25px',
+                        }}>
+                            50000
+                        </p>
+                    </Card>
+                </Col>
+                <Col lg={4} md={6} sm={12}>
+                    <Card className="prime-card prime-outreach-card">
+                        <p className="p-card-title">
+                            <i className="pi pi-user-plus prime-icon-style" 
+                                style={{
+                                    fontSize : "1em",
+                                    backgroundColor: "#e2e2e2",
+                                }}
+                            ></i>
+                            Total Resources Deployed
+                        </p>
+                        <p className="p-card-subtitle"  style={{
+                            fontSize: '25px',
+                        }}>
+                            70000
+                        </p>
+                    </Card>
                 </Col>
             </Row>
         </>
