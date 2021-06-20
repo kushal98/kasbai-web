@@ -41,10 +41,10 @@ function App() {
                 <>
                   <Route 
                     exact
-                    path="/home"
+                    path="/dashboard"
                     component={Home}
                   />
-                  <Redirect from="*" to="/home" />
+                  <Redirect from="*" to="/dashboard" />
                 </>
                 :
                 loginType === 'Admin'?

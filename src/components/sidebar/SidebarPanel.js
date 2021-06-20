@@ -52,7 +52,7 @@ function SidebarPanel(props) {
                                 Profile 
                             </li>
                         </Link>
-                        <Link to='/home' style={{ textDecoration: 'none' , color: '#000' }}>
+                        <Link to='/dashboard' style={{ textDecoration: 'none' , color: '#000' }}>
                             <li 
                                 className="li-item" 
                                 onClick={() => handleLogout()} 
