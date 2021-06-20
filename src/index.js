@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
+
+import { Provider } from "react-redux";
+import { store } from './redux/store'
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -11,7 +15,11 @@ import 'primeflex/primeflex.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <Suspense fallback={null} >
+        <App />
+      </Suspense>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
