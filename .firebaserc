@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "kasbai-a1f2e"
+    "default": "kasbai-a1f2e",
+    "kasbai-react-web": "kasbai-a1f2e"
   }
 }

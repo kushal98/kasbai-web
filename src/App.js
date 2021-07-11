@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './App.css';
 
 import {
-  BrowserRouter,
+  Router,
   Switch,
   Route,
   Redirect,
@@ -19,8 +19,7 @@ import FormPage from './components/form/FormPage';
 import Profile from './components/profile/Profile';
 import history from './components/history';
 
-
-import db from './config/config'
+import { db } from './config/config'
 
 function App() {
 
@@ -41,7 +40,7 @@ function App() {
 
   return (
     <div>
-        <BrowserRouter history={history}>
+        <Router history={history}>
           <ScrollTop />
           {logData()}
           <Header loggedIn={authenticated} loginType={loginType} setLoginType={setLoginType} setLoginTrue={setAuthenticate} />
@@ -52,6 +51,7 @@ function App() {
               {
                 !authenticated?
                 <>
+                  {console.log("not authenticated")}
                   <Route 
                     exact
                     path="/dashboard"
@@ -62,7 +62,6 @@ function App() {
                 :
                 loginType === 'Admin'?
                 <>
-
                   {console.log('history object ', history )}
                   <Route 
                     exact
@@ -115,7 +114,7 @@ function App() {
               }
             </Switch>
           </Jumbotron>
-        </BrowserRouter>
+        </Router>
     </div>
   );
 }

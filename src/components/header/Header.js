@@ -13,16 +13,39 @@ import { BiDonateBlood, BiDownload } from "react-icons/bi";
 import Sidebar from '../sidebar/SidebarPanel';
 import DocumentDialog from '../donor/DocumentDialog';
 
+import { authObj, provider } from '../../config/config'
+import history from '../history'
+
 function Header(props) {
 
   const [visible , setVisible] = useState(false)
   const [docdialog , setDocDialog] = useState(false)
 
   const handleAdminLogin = () => {
-    props.setLoginTrue(true)
-    props.setLoginType('Admin')
-    localStorage.setItem('auth', true)  
-    localStorage.setItem('login-type', 'Admin')  
+      authObj.signInWithPopup(provider)
+        .then((result) => {
+          /** @type {firebase.auth.OAuthCredential} */
+          var credential = result.credential;
+  
+          var token = credential.accessToken;
+          var user = result.user;
+  
+          console.log("token : ",token)
+          console.log("credential : ",credential)
+          console.log("user : ",user)
+          props.setLoginTrue(true)
+          props.setLoginType('Admin')
+          localStorage.setItem('auth', true)  
+          localStorage.setItem('login-type', 'Admin') 
+          history.push("/home");
+ 
+        }).catch((error) => {
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          var email = error.email;
+          var credential = error.credential;
+          console.log(errorCode , errorMessage,email,credential)
+        });
   }
 
   const handleDonorLogin = () => {
@@ -103,7 +126,7 @@ function Header(props) {
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav" style={{ justifyContent: 'flex-end' , backgroundColor: '#ffffff' }}>
                     <Nav style={{ fontSize: '20px' }} >
-                      <Nav.Link as={Link} onClick={() => handleAdminLogin()} className="custTag cust1" to="/home" style={{ padding: '5px', marginRight: '8px'  }}>
+                      <Nav.Link as={Link} onClick={() => handleAdminLogin()} className="custTag cust1" style={{ padding: '5px', marginRight: '8px'  }}>
                         <RiAdminLine size={25} style={{ marginRight: '5px' }}/>
                         Admin Login
                       </Nav.Link>
