@@ -19,6 +19,9 @@ import FormPage from './components/form/FormPage';
 import Profile from './components/profile/Profile';
 import history from './components/history';
 
+
+import db from './config/config'
+
 function App() {
 
   const auth = localStorage.getItem('auth')
@@ -27,10 +30,20 @@ function App() {
   const [authenticated , setAuthenticate] = useState(auth? auth : false)
   const [loginType, setLoginType] = useState(type? type : '');
 
+  const logData = () => {
+    console.log("firestore Data")
+    db.collection("Users").get().then((snap) => 
+      snap.forEach((doc) => {
+          console.log(`${doc.id} => ${JSON.stringify(doc.data())}`)
+      })
+    )
+  }
+
   return (
     <div>
         <BrowserRouter history={history}>
           <ScrollTop />
+          {logData()}
           <Header loggedIn={authenticated} loginType={loginType} setLoginType={setLoginType} setLoginTrue={setAuthenticate} />
           <Jumbotron style={{
             backgroundColor: "#ffffff"
