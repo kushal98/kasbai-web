@@ -41,14 +41,16 @@ function App() {
                 <>
                   <Route 
                     exact
-                    path="/home"
+                    path="/dashboard"
                     component={Home}
                   />
-                  <Redirect from="*" to="/home" />
+                  <Redirect from="*" to="/dashboard" />
                 </>
                 :
                 loginType === 'Admin'?
                 <>
+
+                  {console.log('history object ', history )}
                   <Route 
                     exact
                     path="/home"
@@ -79,7 +81,10 @@ function App() {
                     path="/profile"
                     component={Profile}
                   />
-                  <Redirect from="*" to="/home" />
+                  {/* <Route 
+                    path="*" 
+                    component={Home}  
+                  /> */}
                 </>
                 :
                 <>
@@ -88,7 +93,11 @@ function App() {
                     path="/donor"
                     component={Donor}
                   />
-                  <Redirect from="*" to="/donor" />                
+                  
+                  {/* <Route 
+                    path="*" 
+                    component={Home}  
+                  />                */}
                 </>
               }
             </Switch>

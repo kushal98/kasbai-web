@@ -40,12 +40,10 @@ function UserManagement(props) {
         }
         
         setUser(number);
-        console.log("lenth user " ,length,"  ",username );
     }
 
     const handleRoleChange = (e) => {
         setSelectedRole(e)
-        console.log(selectedRole)
     }
 
     

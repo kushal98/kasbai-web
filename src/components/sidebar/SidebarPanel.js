@@ -19,8 +19,21 @@ function SidebarPanel(props) {
             <div>
                <ul className="list-group mt-2" style={{listStyleType: "none"}}> 
                
-                <Link to={ props.loginType === 'Admin'? '/home' : '/donor' } style={{ textDecoration: 'none' , color: '#000' }}>
-                    <li className="li-item" onClick={e => {props.setVisibility(false)}}  style={{position: "relative"}}>
+                <Link 
+                    to={ 
+                        props.loginType === 'Admin'? 
+                            '/home'
+                        : 
+                            '/donor' 
+                    } 
+                    style={{ textDecoration: 'none' , color: '#000' }}
+                >
+                    <li 
+                        className="li-item" 
+                        onClick={e => {
+                            props.setVisibility(false)
+                        }}  
+                        style={{position: "relative"}}>
                         Home 
                     </li>
                 </Link> 
@@ -28,34 +41,61 @@ function SidebarPanel(props) {
                     props.loginType === 'Admin' ?
                     <> 
                         <Link to='/approval' style={{ textDecoration: 'none' , color: '#000' }}>
-                            <li className="li-item" onClick={e => props.setVisibility(false)}  style={{position: "relative"}}>
+                            <li 
+                                className="li-item" 
+                                onClick={e => { 
+                                    props.setVisibility(false)
+                                }}  
+                                style={{position: "relative"}}>
                                 Approvals 
                             </li>
                         </Link>
                         <Link to='/user-management' style={{ textDecoration: 'none' , color: '#000' }}>
-                            <li className="li-item" onClick={e => props.setVisibility(false)}  style={{position: "relative"}}>
+                            <li 
+                                className="li-item" 
+                                onClick={e => {
+                                    props.setVisibility(false)
+                                }}  
+                                style={{position: "relative"}}>
                                 User Management 
                             </li>
                         </Link>
                         <Link to='/forms' style={{ textDecoration: 'none' , color: '#000' }}>
-                            <li className="li-item" onClick={e => props.setVisibility(false)}  style={{position: "relative"}}>
+                            <li 
+                                className="li-item" 
+                                onClick={e => {
+                                    props.setVisibility(false)
+                                }}  
+                                style={{position: "relative"}}
+                            >
                                 Volunteer Forms
                             </li>
                         </Link>
                         <Link to='/donor' style={{ textDecoration: 'none' , color: '#000' }}>
-                            <li className="li-item" onClick={e => props.setVisibility(false)}  style={{position: "relative"}}>
+                            <li 
+                                className="li-item" 
+                                onClick={e => {
+                                    props.setVisibility(false)
+                                }}  
+                                style={{position: "relative"}}>
                                 Donor 
                             </li>
                         </Link>
                         <Link to='/profile' style={{ textDecoration: 'none' , color: '#000' }}>
-                            <li className="li-item" onClick={e => props.setVisibility(false)}  style={{position: "relative"}}>
+                            <li 
+                                className="li-item" 
+                                onClick={e => {
+                                    props.setVisibility(false)
+                                }}  
+                                style={{position: "relative"}}>
                                 Profile 
                             </li>
                         </Link>
-                        <Link to='/home' style={{ textDecoration: 'none' , color: '#000' }}>
+                        <Link to='/dashboard' style={{ textDecoration: 'none' , color: '#000' }}>
                             <li 
                                 className="li-item" 
-                                onClick={() => handleLogout()} 
+                                onClick={() => {
+                                    handleLogout()}}
                                 style={{position: "relative"}}
                             >
                                 Sign Out  
@@ -63,7 +103,7 @@ function SidebarPanel(props) {
                         </Link>
                     </>
                     :
-                    <Link to='/home' style={{ textDecoration: 'none' , color: '#000' }}>
+                    <Link to='/dashboard' style={{ textDecoration: 'none' , color: '#000' }}>
                         <li 
                             className="li-item" 
                             onClick={() => handleLogout()} 

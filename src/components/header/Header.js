@@ -35,7 +35,6 @@ function Header(props) {
 
   return (
           <div>
-            {console.log(props.loggedIn)}
             <Sidebar visibility = {visible} loginType={props.loginType} setVisibility = {setVisible} setLogin={props.setLoginTrue} />
             <Navbar className="navbar" sticky="top" expand="lg" >
               {
@@ -50,9 +49,9 @@ function Header(props) {
                       '/' 
                     :
                       props.loginType === 'Admin' ?   
-                        '' 
+                        '/home' 
                       :
-                        ''
+                        '/donor'
                 } 
                 style={{ fontSize: '25px' }}
               >
@@ -64,11 +63,11 @@ function Header(props) {
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav" style={{ justifyContent: 'flex-end' , backgroundColor: '#ffffff' }}>
                     <Nav style={{ fontSize: '20px' }} >
-                      <Nav.Link as={Link} onClick={() => setDocDialog(true)} className="custTag cust1" to="/home" style={{ padding: '5px', marginRight: '8px'  }}>
+                      <Nav.Link as={Link} onClick={() => setDocDialog(true)} className="custTag cust1" to="/donor" style={{ padding: '5px', marginRight: '8px'  }}>
                         <FaRegEye size={25} style={{ marginRight: '5px' }}/>
                         View Documents
                       </Nav.Link>
-                      <Nav.Link as={Link} onClick={() => props.setLoginTrue(true)} className="custTag cust1" to="/home" style={{ padding: '5px', marginRight: '8px' }}>
+                      <Nav.Link as={Link} onClick={() => props.setLoginTrue(true)} className="custTag cust1" to="/donor" style={{ padding: '5px', marginRight: '8px' }}>
                         <BiDownload size={25} style={{ marginRight: '5px' }}/>
                         Download Report
                       </Nav.Link>
@@ -84,11 +83,11 @@ function Header(props) {
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav" style={{ justifyContent: 'flex-end' , backgroundColor: '#ffffff' }}>
                     <Nav style={{ fontSize: '20px' }} >
-                      <Nav.Link as={Link} onClick={() => setDocDialog(true)} className="custTag cust1" to="/home" style={{ padding: '5px', marginRight: '8px'  }}>
+                      <Nav.Link onClick={() => setDocDialog(true)} className="custTag cust1" style={{ padding: '5px', marginRight: '8px'  }}>
                         <FaRegEye size={25} style={{ marginRight: '5px' }}/>
                         View Documents
                       </Nav.Link>
-                      <Nav.Link as={Link} onClick={() => props.setLoginTrue(true)} className="custTag cust1" to="/home" style={{ padding: '5px', marginRight: '8px' }}>
+                      <Nav.Link  onClick={() => props.setLoginTrue(true)} className="custTag cust1" style={{ padding: '5px', marginRight: '8px' }}>
                         <BiDownload size={25} style={{ marginRight: '5px' }}/>
                         Download Report
                       </Nav.Link>
@@ -108,11 +107,11 @@ function Header(props) {
                         <RiAdminLine size={25} style={{ marginRight: '5px' }}/>
                         Admin Login
                       </Nav.Link>
-                      <Nav.Link as={Link} onClick={() => handleDonorLogin()} className="custTag cust1" to="/home" style={{ padding: '5px', marginRight: '8px' }}>
+                      <Nav.Link as={Link} onClick={() => handleDonorLogin()} className="custTag cust1" to="/donor" style={{ padding: '5px', marginRight: '8px' }}>
                         <BiDonateBlood size={25} style={{ marginRight: '5px' }}/>
                         Donor Login
                       </Nav.Link>
-                      <Nav.Link as={Link} onClick={() => props.setLoginTrue(true)} className="custTag cust1" style={{  color : 'red', padding: '5px', border: '1px dashed red', borderRadius: '10px' }} to="/home">
+                      <Nav.Link as={Link} onClick={() => props.setLoginTrue(true)} className="custTag cust1" to="/home" style={{  color : 'red', padding: '5px', border: '1px dashed red', borderRadius: '10px' }} >
                         <FaHeart size={20} style={{ marginRight: '5px' }}/>
                         Donate Now
                       </Nav.Link>

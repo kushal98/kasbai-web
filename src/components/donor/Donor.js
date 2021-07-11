@@ -3,6 +3,8 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { Card } from 'primereact/card';
 
+import Map from '../map/Map'
+
 import './Donor.css';
 
 function Donor(props) {
@@ -64,6 +66,15 @@ function Donor(props) {
                             70000
                         </p>
                     </Card>
+                </Col>
+            </Row>
+            <Row  style={{
+                marginBottom: "30px",
+                marginTop: '20px',
+            }}>
+                <Col lg={12} md={12} sm={12}>
+                    <h1>Community Stats :</h1>
+                    <Map />
                 </Col>
             </Row>
         </>
