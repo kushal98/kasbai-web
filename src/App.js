@@ -32,7 +32,6 @@ function App() {
 
   const logData = () => {
     console.log("firestore Data")
-    console.log("ENV VAriable in preview ${{ secrets.GITHUB_TOKEN }}" )
     db.collection("Users").get().then((snap) => 
       snap.forEach((doc) => {
           console.log(`${doc.id} => ${JSON.stringify(doc.data())}`)
